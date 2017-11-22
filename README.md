@@ -18,7 +18,7 @@ If passing raw image is preferred, consider changing `jpeg` to `bmp`.
 
 Run the following command to see stream your camera through localhost: (`CMake` and `OpenCV` required)
 ```
-git clone https://github.com/chenxiaoqino/udp-image-streaming.git
+git clone https://github.com/cezieu/udp-image-streaming.git
 cd udp-image-streaming/
 cmake . && make
 ./server 10000 &
