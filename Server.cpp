@@ -47,7 +47,7 @@ int main(int argc, char * argv[]) {
         unsigned short sourcePort; // Port of datagram source
 
         clock_t last_cycle = clock();
-
+        VideoWriter vout("out.avi", CV_FOURCC('M','J','P','G'), 30, Size(FRAME_WIDTH,FRAME_HEIGHT));
         while (1) {
             // Block until receive message from a client
             do {
@@ -75,6 +75,7 @@ int main(int argc, char * argv[]) {
                 continue;
             }
             imshow("recv", frame);
+            vout.write(frame);
             free(longbuf);
 
             waitKey(1);
